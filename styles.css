@@ -12,9 +12,9 @@ html, body {
     margin: 0;
     overflow: auto;
 }
-h1, h2, p {
+h1, h2, p{
     color: var(--mainText);
-    font-weight: 
+    font-weight: sans-serif;
 }
 #navbar {
     background-color: var(--secondary);
@@ -73,6 +73,22 @@ h1, h2, p {
     width: 100%;
     height: 100vh;
     text-align: center;
+}
+.project-tile-grid{
+    display: grid;
+    /*FIX GRID NOT WORKING*/
+    grid-template-columns: repeat(autofit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project-tile{
+    background: var(--primary);
+    border-radius: 2px;
+    box-shadow: ;
 }
 #social-links{
 
