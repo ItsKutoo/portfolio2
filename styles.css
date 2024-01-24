@@ -1,7 +1,8 @@
 :root {
     --primary: rgb(89, 79, 79);
-    --secondary: rgb(5, 136, 5);
-    --dark: green;
+    --secondary: rgb(17, 115, 243);
+    --dark: rgb(26, 135, 134);
+   
 
     --mainText:black;
     --secondaryText: black;
@@ -17,7 +18,7 @@ h1, h2, p{
     font-weight: sans-serif;
 }
 #navbar {
-    background-color: var(--secondary);
+    background-color: var(--dark);
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -26,6 +27,10 @@ h1, h2, p{
     top: 0;
     left: 0;
     z-index: 1;
+    -webkit-box-shadow: 3px 8px 10px 6px rgba(0,0,0,0.59);
+    -moz-box-shadow: 3px 8px 10px 6px rgba(0,0,0,0.59);
+    box-shadow: 3px 8px 10px 6px rgba(0,0,0,0.59);
+
 }
 .nav-list{
     display: flex;
@@ -69,7 +74,7 @@ h1, h2, p{
 
 }
 #projects{
-    background-color: rgb(26, 135, 134);
+    background-color: var(--dark);
     width: 100%;
     height: 100vh;
     text-align: center;
@@ -77,22 +82,35 @@ h1, h2, p{
 .project-tile-grid{
     display: grid;
     /*FIX GRID NOT WORKING*/
-    grid-template-columns: repeat(autofit, minmax(320px, 1fr));
+    grid-template-columns: auto auto auto;
     grid-gap: 4rem;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
+    padding: 10px;
 }
 
 .project-tile{
     background: var(--primary);
     border-radius: 2px;
-    box-shadow: ;
-}
-#social-links{
+    text-align: center;
+    padding: 10rem 0rem;
+    -webkit-box-shadow: 3px 8px 10px 6px rgba(0,0,0,0.59);
+    -moz-box-shadow: 3px 8px 10px 6px rgba(0,0,0,0.59); 
+    box-shadow: 3px 8px 10px 6px rgba(0,0,0,0.59);
+    text-decoration: none;
+    color: white;
 
 }
-#navbar {
-    
+#social-links{
+   display: grid;
+   grid-area: auto;
+   background-color: var(--primary);
+   width: 100%;
+   height: 100vh;
+   margin: 0 auto;
+   padding: 10px;
+   max-width: 1280px;
+   margin-bottom: 6rem;
 }
