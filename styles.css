@@ -1,6 +1,6 @@
 :root {
-    --primary: rgb(89, 79, 79);
-    --secondary: rgb(17, 115, 243);
+    --primary: rgb(194, 181, 181);
+    --secondary: rgb(68, 78, 92);
     --dark: rgb(26, 135, 134);
    
 
@@ -16,6 +16,8 @@ html, body {
 h1, h2, p{
     color: var(--mainText);
     font-weight: sans-serif;
+    font-family: 'DM Mono', monospace, Arial, Helvetica, sans-serif;
+  
 }
 #navbar {
     background-color: var(--dark);
@@ -71,21 +73,28 @@ h1, h2, p{
       height: 100vh;
       background-color: var(--primary);
       flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+
 
 }
+.main-title{
+    font-family: 'Crimson Text', Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
 #projects{
-    background-color: var(--dark);
+    background-color: rgb(69, 63, 63);
     width: 100%;
-    height: 100vh;
-    text-align: center;
+    height: 200vh;
+    
 }
 .project-tile-grid{
     display: grid;
-    /*FIX GRID NOT WORKING*/
     grid-template-columns: auto auto auto;
     grid-gap: 4rem;
     width: 100%;
-    max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
     padding: 10px;
@@ -101,16 +110,44 @@ h1, h2, p{
     box-shadow: 3px 8px 10px 6px rgba(0,0,0,0.59);
     text-decoration: none;
     color: white;
-
+    margin: 2rem;
 }
 #social-links{
-   display: grid;
-   grid-area: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    background-color: var(--primary);
-   width: 100%;
-   height: 100vh;
+   width: 70%;
+   height: 70vh;
    margin: 0 auto;
    padding: 10px;
    max-width: 1280px;
    margin-bottom: 6rem;
+   position: relative;
 }
+.social-box{
+
+    background-color: var(--secondary);
+    width: 60%;
+    height: 60vh;
+    margin: 0 auto;
+    position: absolute;
+    overflow: hidden;
+}
+.profile-link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    padding-top: 1.5rem;
+    font-size: 40px;
+}
+
+@media (max-width:1024px) {
+    #main-container{
+        overflow: hidden;
+}
+ 
